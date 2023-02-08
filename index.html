@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Assigment-Animacija</title>
+    <style>
+       body {
+            background-color: #050210;
+        }
+        #wrap {
+            height: 300px;
+            width: 300px;
+            background-image: linear-gradient(#fb5dad ,#55fb9f,#b97aff );
+            margin: 200px auto;
+            border: 1px solid transparent;
+            border-radius: 100%;
+            animation-name: my-animation;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            position:relative;
+            z-index: 1;
+        }
+      
+       
+        
+        #fix {
+            height: 260px;
+            width: 260px;
+            margin: 20px;
+            background-color: #050210;
+            position: relative;
+            border-radius: 100%;
+            z-index: 2;
+
+        }
+        #scale {
+            height: 260px;
+            width: 260px;
+            margin: 0px;
+            border: 1px solid transparent;
+            background-color:#0b0325bf ;
+            position: absolute;
+            animation-name: my-animation1;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            border-radius: 100%;
+            z-index: 3;
+    
+        }
+
+
+        #wrap::after {
+            content:"";
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            position: absolute;
+            background-image: linear-gradient(#fb5dad ,#55fb9f,#b97aff );
+            border-radius: 100%;
+            filter: blur(40px);    
+          
+        }
+
+
+        @keyframes my-animation {
+            0%{
+                transform: rotate(0deg);
+                
+            }
+            25%{
+                transform:rotate(90deg);
+                
+            }
+            50%{
+                transform:rotate(180deg);
+                
+            }
+            75% {
+                transform:rotate(270deg);
+                
+                
+            }
+            100% {
+                transform:rotate(360deg);
+                
+               
+            }
+
+        }
+
+
+        
+
+        @keyframes my-animation1 {
+            0%{
+                transform: scale(0);
+                
+                
+            }
+            25%{
+                transform:scale(0.25);
+                
+            }
+            50%{
+                transform:scale(0.5);
+                
+            }
+            75% {
+                transform:scale(0.75);
+                
+                
+            }
+            100% {
+                transform:scale(1);
+                
+               
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+         
+        <div id="fix">
+            <div id="scale">
+
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
